@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MODYXBOT1 — Bot Token Checker</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+<div class="grid-overlay"></div>
+<div class="particles"></div>
+
+<!-- Top bar -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <span class="dot green"></span>
+        <span class="top-text">SYSTEM: ONLINE</span>
+    </div>
+    <div class="top-bar-center">
+        <span class="top-text">MODY COMMUNITY • v2.0</span>
+    </div>
+    <div class="top-bar-right">
+        <span class="top-text">TIME: <span id="live-clock">--:--:--</span></span>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-glitch" data-text="MODYXBOT">MODYXBOT</div>
+        <div class="banner-subtitle">
+            <span class="typing">▸ BOT TOKEN CHECKER &nbsp;&nbsp;▸ BAN DETECTOR &nbsp;&nbsp;▸ UNLIMITED USE</span>
+        </div>
+        <div class="banner-line"></div>
+    </div>
+
+    <!-- Timer Panel -->
+    <div class="timer-panel">
+        <div class="timer-item">
+            <div class="timer-label">UPTIME</div>
+            <div class="timer-value" id="uptime">00:00:00</div>
+        </div>
+        <div class="timer-item">
+            <div class="timer-label">TOTAL CHECKS</div>
+            <div class="timer-value" id="total-checks">0</div>
+        </div>
+        <div class="timer-item">
+            <div class="timer-label">SERVER TIME</div>
+            <div class="timer-value" id="server-time">--:--</div>
+        </div>
+        <div class="timer-item">
+            <div class="timer-label">STATUS</div>
+            <div class="timer-value status-active">ACTIVE</div>
+        </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-dots"><span></span><span></span><span></span></div>
+            <div class="terminal-title">root@MODYXBOT1:~/checker</div>
+        </div>
+
+        <div class="terminal-body">
+            <div class="terminal-line">
+                <span class="prompt">root@MODY:~$</span>
+                <span class="cmd">./check_bot.sh</span>
+            </div>
+
+            <div class="info-lines">
+                <div>▸ Initializing bot verification...</div>
+                <div>▸ Connecting to Telegram API (getMe)...</div>
+                <div>▸ Ready for token input.</div>
+            </div>
+
+            <div class="input-area">
+                <label for="token-input" class="input-label">
+                    <span class="arrow">▶</span> PASTE BOT TOKEN
+                </label>
+                <div class="input-wrap">
+                    <span class="input-prefix">$</span>
+                    <input
+                        type="text"
+                        id="token-input"
+                        placeholder="1234567890:AAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <button id="paste-btn" title="Paste from clipboard">📋</button>
+                </div>
+                <button id="check-btn">
+                    <span class="btn-text">CHECK BOT STATUS</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </div>
+
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">
+            ▸ <span class="green">MODY COMMUNITY</span> © 2026 ▸ Created with ⚡ by MODYXBOT1
+        </div>
+        <div class="footer-links">
+            <a href="https://t.me/MODYXBOT1" target="_blank">TELEGRAM</a>
+            <span class="sep">◆</span>
+            <a href="https://t.me/DGDRIFT" target="_blank">CHANNEL</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
